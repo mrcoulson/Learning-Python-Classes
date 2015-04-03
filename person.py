@@ -1,14 +1,14 @@
 from datetime import datetime, date, timedelta
 import sys
 
-class Person:
+class Person(object):
 	
-	def __init__(self, birthdate, givenName, surname):
+	def __init__(self, birthdate, given_name, surname):
 		self.birthdate = birthdate
-		self.givenName = givenName
+		self.given_name = given_name
 		self.surname = surname
 
-	def calculateAge(self):
+	def calculate_age(self):
 		if self.birthdate:
 			try:
 				d = datetime.strptime(self.birthdate, "%b %d %Y")
